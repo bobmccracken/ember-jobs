@@ -2,7 +2,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   queryParams: [
     'type',
-    'search'
+    'search',
+      'location'
   ],
 
   actions: {
@@ -12,6 +13,9 @@ export default Ember.Controller.extend({
 
     searchChanged(search) {
       this.set('search', search);
-    }
+    },
+      locationChanged(location){
+          this.set('location',location);
+      }
   }
 });
