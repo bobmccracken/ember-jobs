@@ -7,13 +7,22 @@ module.exports = function(app) {
       'location': [
         {
             id: 1,
-            address: "105/b",
-            city: "nittambuwa",
-            state:"gampaha",
+            address: "197",
+            city: "nugegoda",
+            state:"colombo",
             zipcode:"11880",
             company: 1,
             jobs: [1],
-        }
+        },
+          {
+            id: 2,
+            address: "976",
+            city: "ethulkotte",
+            state:"colombo",
+            zipcode:"12222",
+            company: 2,
+            jobs: [2],
+          }
       ]
     });
   });

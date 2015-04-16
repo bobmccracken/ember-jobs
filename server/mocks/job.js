@@ -8,12 +8,22 @@ module.exports = function(app) {
         {
           id: 1,
           live: true,
-          title: 'my test job', 
+          title: '.NET Developer', 
           company: 1,
           location: 'bla',
-          type: 'bla',
-          description: 'bla'
-        }
+          type: 'IT',
+          description: 'immediate'
+        },
+          {
+              id:2,
+              live:true,
+              title:'Java Developer',
+              comapany:2,
+              location:'bla',
+              type:'IT/QA',
+              descripetion:'Strong OOP'
+          }
+              
       ]
     });
   });

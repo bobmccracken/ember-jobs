@@ -7,8 +7,12 @@ module.exports = function(app) {
       'company': [
         {
           id: 1,
-          name: 'test company'
-        }
+          name: 'aeturnum'
+        },
+          {
+              id:2,
+              name:'leapset'
+          }
       ]
     });
   });

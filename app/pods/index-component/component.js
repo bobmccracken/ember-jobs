@@ -42,7 +42,7 @@ export default Ember.Component.extend({
           queryRegExp.test(job.get('description')) ||
           queryRegExp.test(job.get('type')) ||
           queryRegExp.test(job.get('company.name')) ||
-          queryRegExp.test(job.get('location'));
+          queryRegExp.test(job.get('location.city'));
       });
     }
 
@@ -57,5 +57,9 @@ export default Ember.Component.extend({
     searchChanged(search) {
       this.sendAction('searchChanged', search);
     }
+//      ,
+//    jobChanged(job){
+//        this.sendAction('jobChanged',job);
+//    }
   },
 });
