@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     // in sequence
     var jobs      = await this.store.find('job');
     var companies = await this.store.find('company');
+    var locations = await this.store.find('location');
 
     return jobs;
   }

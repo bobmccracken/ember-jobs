@@ -4,7 +4,17 @@ module.exports = function(app) {
 
   locationRouter.get('/', function(req, res) {
     res.send({
-      'location': []
+      'location': [
+        {
+            id: 1,
+            address: "105/b",
+            city: "nittambuwa",
+            state:"gampaha",
+            zipcode:"11880",
+            company: 1,
+            jobs: [1],
+        }
+      ]
     });
   });
 

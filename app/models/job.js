@@ -4,7 +4,7 @@ export default DS.Model.extend({
   live:     DS.attr('boolean'),
   title:    DS.attr('string'),
   company:  DS.belongsTo('company', { async: true }),
-  location: DS.attr('string'),
+  location: DS.belongsTo('location', {async: true}),
   type:     DS.attr('string'),
   description: DS.attr('string'),
   postedAt: DS.attr('date'),
