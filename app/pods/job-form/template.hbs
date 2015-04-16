@@ -5,13 +5,31 @@
   {{input value=job.title}}
 </label>
 <label name="type">
-  type
+  Type
   {{input value=job.type}}
 </label>
 <label name="description">
   description
   {{input value=job.description}}
 </label>
+<label name="company">
+Company
+{{input }}
+</label>
+
+{{#rl-dropdown-container class="dropdown"}}
+  {{#rl-dropdown-toggle class="btn btn-default"}}
+    Toggle <span class="caret"></span>
+  {{/rl-dropdown-toggle}}
+ 
+  {{#rl-dropdown tagName="ul" class="dropdown-menu" closeOnChildClick="a:link"}}
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  {{/rl-dropdown}}
+{{/rl-dropdown-container}}
+
+
 
 <button id="save"
         {{action "save"}}
