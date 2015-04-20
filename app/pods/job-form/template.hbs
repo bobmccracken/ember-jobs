@@ -14,21 +14,16 @@
 </label>
 <label name="company">
 Company
-{{input }}
+{{view "select" content=company prompt="Please select a company " optionValuePath="company.id"
+       optionLabelPath="company.name"  }}
 </label>
 
-{{#rl-dropdown-container class="dropdown"}}
-  {{#rl-dropdown-toggle class="btn btn-default"}}
-    Toggle <span class="caret"></span>
-  {{/rl-dropdown-toggle}}
- 
-  {{#rl-dropdown tagName="ul" class="dropdown-menu" closeOnChildClick="a:link"}}
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
-  {{/rl-dropdown}}
-{{/rl-dropdown-container}}
-
+<label name="location">
+Location
+{{view "select" content=location prompt="Please select a location " optionValuePath="location.id"
+       optionLabelPath="location.name"  }}
+</label>
+<br>
 
 
 <button id="save"

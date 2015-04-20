@@ -20,5 +20,12 @@ export default Ember.Component.extend({
         this.sendAction('jobCreated');
       }
     }
-  }
+  },
+  location:function(){
+      return this.store.findAll('location');                              
+  }.property(),
+      
+      company:function(){
+          return this.store.findAll('company');
+      }.property()                                    
 });

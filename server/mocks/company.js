@@ -12,6 +12,10 @@ module.exports = function(app) {
           {
               id:2,
               name:'leapset'
+          },
+          {
+          id:3,
+          name:'wso2'
           }
       ]
     });
