@@ -9,14 +9,14 @@ module.exports = function(app) {
           id: 1,
           name: 'aeturnum'
         },
-          {
-              id:2,
-              name:'leapset'
-          },
-          {
+        {
+          id:2,
+          name:'leapset'
+        },
+        {
           id:3,
           name:'wso2'
-          }
+        }
       ]
     });
   });

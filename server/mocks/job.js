@@ -14,15 +14,15 @@ module.exports = function(app) {
           type: 'IT',
           description: 'immediate'
         },
-          {
-              id:2,
-              live:true,
-              title:'Java Developer',
-              comapany:2,
-              location:'bla',
-              type:'IT/QA',
-              descripetion:'Strong OOP'
-          }
+        {
+          id:2,
+          live:true,
+          title:'Java Developer',
+          comapany:2,
+          location:'bla',
+          type:'IT/QA',
+          descripetion:'Strong OOP'
+        }
               
       ]
     });

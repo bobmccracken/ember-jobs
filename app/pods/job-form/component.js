@@ -15,20 +15,18 @@ export default Ember.Component.extend({
 
       try {
         await this.store.createRecord('job', jobAttributes).save();
-//        await this.store.createRecord('company', companyAttributes).save();
-//        await this.store.createRecord('location', locationAttributes).save();
       } finally {
         this.set('isSaving', false);
         this.sendAction('jobCreated');
       }
     }
-  }
-  ,
+  },
+                                      
   location:function(){
       return this.store.findAll('location');                              
   }.property(),
-      
-      company:function(){
-          return this.store.findAll('company');
-      }.property()                                    
+    
+  company:function(){
+      return this.store.findAll('company');
+  }.property()                                    
 });

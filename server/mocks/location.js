@@ -6,23 +6,23 @@ module.exports = function(app) {
     res.send({
       'location': [
         {
-            id: 1,
-            address: "197",
-            city: "nugegoda",
-            state:"colombo",
-            zipcode:"11880",
-            company: 1,
-            jobs: [1],
+          id: 1,
+          address: "197",
+          city: "nugegoda",
+          state:"colombo",
+          zipcode:"11880",
+          company: 1,
+          jobs: [1],
         },
-          {
-            id: 2,
-            address: "976",
-            city: "ethulkotte",
-            state:"colombo",
-            zipcode:"12222",
-            company: 2,
-            jobs: [2],
-          }
+        {
+          id: 2,
+          address: "976",
+          city: "ethulkotte",
+          state:"colombo",
+          zipcode:"12222",
+          company: 2,
+          jobs: [2],
+        }
       ]
     });
   });

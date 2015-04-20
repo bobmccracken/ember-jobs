@@ -13,15 +13,23 @@
   {{input value=job.description}}
 </label>
 <label name="company">
-Company
-{{view "select" content=company prompt="Please select a company " optionValuePath="company.id"
-       optionLabelPath="company.name" }}
+  Company
+  {{view "select" 
+    content=company 
+    value=job.company 
+    prompt="Please select a company " 
+    optionValuePath="content"
+    optionLabelPath="content.name" }}
 </label>
 
-<label name="location">
-Location
-{{view "select" content=location prompt="Please select a location " optionValuePath="location.id"
-       optionLabelPath="location.name"  }}
+<label name="location" class="dskjaf">
+  Location
+  {{view "select" 
+    content=location
+    value=job.location 
+    prompt="Please select a location " 
+    optionValuePath="content"
+    optionLabelPath="content.city" }}
 </label>
 <br>
 
