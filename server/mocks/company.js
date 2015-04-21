@@ -18,7 +18,7 @@ module.exports = function(app) {
         {
           id:3,
           name:'wso2',
-          jobs: []
+          jobs: [1]
         }
       ]
     });

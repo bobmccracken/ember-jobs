@@ -15,6 +15,13 @@ export default Ember.Route.extend({
         outlet: 'modal'
       });
     },
+      
+    createCompany() {
+      this.render('modals/new-company', {
+        into: 'application',
+        outlet: 'modal'
+      });
+    },
 
     closeModal() {
       this.disconnectOutlet({

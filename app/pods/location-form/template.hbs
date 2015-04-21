@@ -1,1 +1,32 @@
-<h1>Location</h1>
+<<h1>Location</h1>
+
+<label name="address">
+  Address
+  {{input value=location.address}}
+</label>
+<label name="location">
+  Location
+  {{input value=location.city}}
+</label>
+<label name="state">
+  State
+  {{input value=location.state}}
+</label>
+<label name="zipcode">
+  Zipcode
+  {{input value=job.description}}
+</label>
+
+
+<br>
+
+
+<button id="save"
+        {{action "save"}}
+        disabled={{isSaving}}>
+  {{#if isSaving}}
+    Saving
+  {{else}}
+    Save
+  {{/if}}
+</button>

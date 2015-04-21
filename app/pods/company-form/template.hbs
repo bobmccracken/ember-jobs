@@ -1,0 +1,27 @@
+<h1>Company</h1>
+
+<label name="name">
+  Name
+  {{input value=company.name}}
+</label>
+<label name="logo">
+  Logo
+  {{input value=company.logo}}
+</label>
+<label name="url">
+  URL
+  {{input value=company.url}}
+</label>
+
+<br>
+
+
+<button id="save"
+        {{action "save"}}
+        disabled={{isSaving}}>
+  {{#if isSaving}}
+    Saving
+  {{else}}
+    Save
+  {{/if}}
+</button>

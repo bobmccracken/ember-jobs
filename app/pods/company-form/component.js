@@ -4,20 +4,21 @@ export default Ember.Component.extend({
   tagName: 'form',
   init() {
     this._super(...arguments);
-    this.set('location', {});
+    this.set('company', {});
   },
+  selectedCompany:null,
   actions: {
     async save() {
-      var locationAttributes = this.get('location');
+      var companyAttributes = this.get('company');
       
       this.set('isSaving', true);
 
       try {
-        await this.store.createRecord('location', locationAttributes).save();
+        await this.store.createRecord('company', companyAttributes).save();
       } finally {
         this.set('isSaving', false);
         this.sendAction('jobCreated');
       }
     }
-  }                                   
+  }                                    
 });
