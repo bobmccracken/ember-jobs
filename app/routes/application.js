@@ -8,6 +8,13 @@ export default Ember.Route.extend({
         outlet: 'modal'
       });
     },
+    
+    createLocation() {
+      this.render('modals/new-location', {
+        into: 'application',
+        outlet: 'modal'
+      });
+    },
 
     closeModal() {
       this.disconnectOutlet({

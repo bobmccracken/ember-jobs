@@ -11,6 +11,7 @@
   </div>
 
   <div class='nav-right'>
+    <button class='dark' id="create-location" {{action 'locationButtonClicked'}}> Create Location </button>
     <button class='dark' id="post-job" {{action 'buttonClicked'}}> Post a Job </button>
     {{#link-to 'admin.index'}}
       Admin

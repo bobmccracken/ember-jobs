@@ -4,6 +4,9 @@ export default Ember.Component.extend({
   actions: {
     buttonClicked() {
       this.sendAction('postJob');
+    },
+    locationButtonClicked() {
+      this.sendAction('createLocation');
     }
   }
 });
