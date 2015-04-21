@@ -1,45 +1,50 @@
 <h1>Job</h1>
-
-<label name="title">
-  Title
-  {{input value=job.title}}
-</label>
-<label name="type">
-  Type
-  {{input value=job.type}}
-</label>
-<label name="description">
-  description
-  {{input value=job.description}}
-</label>
-<label name="company">
-  Company
+<form>
+<div class="form-group">
+<label for="title">
+  Title</label>
+  {{input value=job.title class="form-control" id="title" placeholder="Enter title"}}
+</div>
+<div class="form-group">
+<label for="type">
+  Type</label>
+  {{input value=job.type class="form-control" id="type" placeholder="Enter type"}}
+</div>
+<div class="form-group">
+<label for="description">
+  description</label>
+  {{input value=job.description class="form-control" id="type" placeholder="Enter description"}}
+</div>
+<div class="form-group">
+<label for="company">
+  Company</label>
   {{view "select" 
     content=company 
     value=job.company 
     prompt="Please select a company " 
     optionValuePath="content"
-    optionLabelPath="content.name" }}
-</label>
-
-<label name="location" class="dskjaf">
-  Location
+    optionLabelPath="content.name" class="form-control"}}
+</div>
+<div class="form-group">
+<label for="location" class="dskjaf">
+  Location</label>
   {{view "select" 
     content=location
     value=job.location 
     prompt="Please select a location " 
     optionValuePath="content"
-    optionLabelPath="content.city" }}
-</label>
-<br>
+    optionLabelPath="content.city" class="form-control"}}
+</div>
+
 
 
 <button id="save"
         {{action "save"}}
-        disabled={{isSaving}}>
+        disabled={{isSaving}} class="btn btn-default">
   {{#if isSaving}}
     Saving
   {{else}}
     Save
   {{/if}}
 </button>
+</form>
