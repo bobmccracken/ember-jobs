@@ -7,15 +7,18 @@ module.exports = function(app) {
       'company': [
         {
           id: 1,
-          name: 'aeturnum'
+          name: 'aeturnum',
+          jobs: [1]
         },
         {
           id:2,
-          name:'leapset'
+          name:'leapset',
+          jobs: [2]
         },
         {
           id:3,
-          name:'wso2'
+          name:'wso2',
+          jobs: []
         }
       ]
     });

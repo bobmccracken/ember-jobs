@@ -10,7 +10,7 @@ module.exports = function(app) {
           live: true,
           title: '.NET Developer', 
           company: 1,
-          location: 'bla',
+          location: 1,
           type: 'IT',
           description: 'immediate'
         },
@@ -19,7 +19,7 @@ module.exports = function(app) {
           live:true,
           title:'Java Developer',
           comapany:2,
-          location:'bla',
+          location:2,
           type:'IT/QA',
           descripetion:'Strong OOP'
         }
