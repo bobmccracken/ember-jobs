@@ -94,3 +94,4 @@ test('visiting / and adding a new job modal', async function test(assert) {
   assert.equal(numberOfJobs(), 1, 'expected one jobs');
   assert.equal(text('.job-posting:first .name-and-company'), 'Cool Job at Yahoo');
 });
+

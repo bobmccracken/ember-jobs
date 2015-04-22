@@ -8,7 +8,7 @@ import { stubResolver } from '../helpers/container';
 
 var application, server;
 
-module('Acceptance: NewLocation', {
+module('Acceptance: NewCompany', {
   beforeEach() {
     server = new Pretender();
     application = startApp({ }, function(app) {
@@ -31,19 +31,19 @@ function isNotVisible(assert, selector) {
   assert.ok(!$(selector).is(':visible'), 'expected `' + selector + '` to NOT be visible');
 }
 
-test('visiting / and opening/closing the  new job modal', async function test(assert) {
+test('visiting / and opening/closing the  new company modal', async function test(assert) {
   server.get('/jobs',      json(200, { jobs:      [] }));
   server.get('/companies', json(200, { companies: [] }));
   server.get('/locations', json(200, { locations: [] }));
 
   await visit('/');
-  await click('#create-location');
+  await click('#create-company');
 
-  isVisible(assert, '.new-location-modal');
+  isVisible(assert, '.new-company-modal');
 
   await click('.our-modal');
 
-  isNotVisible(assert, '.new-job-modal');
+  isNotVisible(assert, '.new-company-modal');
 });
 
 test('form data is successfully passed to server', async function test(assert) {
@@ -51,35 +51,31 @@ test('form data is successfully passed to server', async function test(assert) {
   server.get('/companies', json(200, { companies: [] }));
   server.get('/locations', json(200, { locations: [] }));
   
-  var locationObj = {
-    address: 'test address',
-    city: 'test city',
-    state: 'test state',
-    zipcode: '11880'
+   
+  var companyObj = {
+    name: 'test company'
+    
   }
 
-  server.post('/locations', function(request) {
-    var requestLocation = JSON.parse(request.requestBody).location;
+  server.post('/companies', function(request) {
+    var requestLocation = JSON.parse(request.requestBody).company;
     
-    assert.equal(requestLocation.address, locationObj.address);
-    assert.equal(requestLocation.city, locationObj.city);
-    assert.equal(requestLocation.state, locationObj.state);
-    assert.equal(requestLocation.zipcode, locationObj.zipcode);
+    assert.equal(requestLocation.name, companyObj.name);
+   
     
-    return [201, {"Content-Type": "application/json"}, JSON.stringify(locationObj)];
+    
+    return [201, {"Content-Type": "application/json"}, JSON.stringify(companyObj)];
   });
 
   await visit('/');
-  await click('#create-location');
-  isVisible(assert, '.new-location-modal');
+  await click('#create-company');
+  isVisible(assert, '.new-company-modal');
   
-  await fillIn('input#address', locationObj.address);
-  await fillIn('input#city', locationObj.city); // you mis-named the id on this input. Why 'location'? It should be 'city'
-  await fillIn('input#state', locationObj.state);
-  await fillIn('input#zipcode', locationObj.zipcode); // you mis-named this id as well. Also the value.
+  await fillIn('input#name', companyObj.name);
+  
 
   await click('#save');
   
-  isNotVisible(assert, '.new-job-modal');
+  isNotVisible(assert, '.new-company-modal');
 
 });
