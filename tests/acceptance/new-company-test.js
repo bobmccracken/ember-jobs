@@ -53,7 +53,7 @@ test('visiting / and opening/closing the  new job modal', async function test(as
 });
 
 test('form data is successfully passed to server', async function test(assert) {
-  server.get('/jobs',      json(200, { jobs:      [] }));
+  server.get('/jobs',      json(200, { jobs:      [{ id: 1, live: true, type: 'UI Engineer',descripetion:'dflkvmdl',applyURL:'fvdscvds'  }] }));
   server.get('/companies', json(200, { companies: [] }));
   server.get('/locations', json(200, { locations: [] }));
 
@@ -80,14 +80,15 @@ test('form data is successfully passed to server', async function test(assert) {
 
         await visit('/');
         await click('#create-company');
-        isVisible(assert, '.new-company-modal');
+        //isVisible(assert, '.new-company-modal');
         var bgimage=window.location.pathname;
         //alert(bgimage);
         await fillIn('input#name', companyObj.name);
         await fillIn('input#logo', bgimage.pathname);
         await fillIn('input#url', companyObj.url);
         await click('#save');
-
+        isVisible(assert, '.new-company-modal');
         isNotVisible(assert, '.new-company-modal');
 
     });
+

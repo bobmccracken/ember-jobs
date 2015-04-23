@@ -32,7 +32,8 @@ function isNotVisible(assert, selector) {
 }
 
 test('visiting / and opening/closing the  new job modal', async function test(assert) {
-  server.get('/jobs',      json(200, { jobs:      [] }));
+  server.get('/jobs',      json(200, { jobs:      [ { id: 1, live: true, type: 'UI Engineer',descripetion:'dflkvmdl',applyURL:'fvdscvds'  }
+     ] }));
   server.get('/companies', json(200, { companies: [] }));
   server.get('/locations', json(200, { locations: [] }));
 

@@ -1,21 +1,31 @@
+<div class="panel panel-default">
+<div class="row">
 {{#each jobs as |job|}}
-  <div class='card job-posting small'>
-    <div class='name-and-company'>
+  <div class='list-group col-md-6 col-md-offset-3'>
+      <div class="row">
+     <a href="#" class="list-group-item">
+    <div class='name-and-company col-md-3 col-md-offset-3' >
       {{#link-to 'job' job}}
         {{job.title}}
       {{/link-to}}
       at {{job.company.name}}
     </div>
-    <div class='location'>
+    <div class='location col-md-3'>
       {{job.location.city}}
     </div>
-    <div class='posted-at'>
+    <div class='col-md-3'>
       Posted: {{job.postedAt}}
-    </div>
-    <div class='arrow'>
+    
+    
       {{#link-to 'job' job}}
-        <span class='arrow-icon'></span>
+      
+        <span class='glyphicon glyphicon-triangle-right' aria-hidden="true"></span>
+      
       {{/link-to}}
+    </div>
+    </a>
     </div>
   </div>
 {{/each}}
+</div>
+</div>
