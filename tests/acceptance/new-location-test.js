@@ -81,6 +81,6 @@ test('form data is successfully passed to server', async function test(assert) {
 
   await click('#save');
   
-  isNotVisible(assert, '.new-job-modal');
+  isNotVisible(assert, '.new-location-modal');
 
 });

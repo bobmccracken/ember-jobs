@@ -87,7 +87,6 @@ test('form data is successfully passed to server', async function test(assert) {
         await fillIn('input#logo', bgimage.pathname);
         await fillIn('input#url', companyObj.url);
         await click('#save');
-        isVisible(assert, '.new-company-modal');
         isNotVisible(assert, '.new-company-modal');
 
     });

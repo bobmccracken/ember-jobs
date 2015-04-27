@@ -17,7 +17,7 @@ export default Ember.Component.extend({
         await this.store.createRecord('company', companyAttributes).save();
       } finally {
         this.set('isSaving', false);
-        this.sendAction('jobCreated');
+        this.sendAction('companyCreated');
       }
     }
   }                                    

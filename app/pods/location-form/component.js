@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         await this.store.createRecord('location', locationAttributes).save();
       } finally {
         this.set('isSaving', false);
-        this.sendAction('jobCreated');
+        this.sendAction('locationCreated');
       }
     }
   }                                   
