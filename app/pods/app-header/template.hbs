@@ -1,27 +1,26 @@
-<div class='nav'>
 
-  <div class='nav-left'>
-  <div class="thumbnail">
+<nav class="navbar navbar-inverse nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
     {{#link-to 'index'}}
-      <img id='logo' src='/ember_logo.png' alt='ember'>
+      <img id='logo' src='/ember_logo.png' alt='ember' height='42' width='42'>
     {{/link-to}}
-  </div>
-</div>
-  <div class='nav-center'>
-  <div class="page-header">
-    <h1> JOB BOARD </h1>
-  </div>
-  </div>
-  <div class="nav-right">
+    </div>
+    <div>
+    
+      <div class='nav-center'>
   
-  <ul class="nav nav-pills">
-     <li role="presentation" class="active"><button class='btn btn-default' id="create-location" {{action 'locationButtonClicked'}}> Create Location </button></li>
-    <li role="presentation"><button class='btn btn-default' id="create-company" {{action 'companyButtonClicked'}}> Create Company </button></li>
-    <li role="presentation"><button class='btn btn-default' id="post-job" {{action 'buttonClicked'}}> Post a Job </button></li>
-   {{#link-to 'admin.index'}}
-      Admin
-    {{/link-to}}
-    </ul>
-  </div>
+    <h1> JOB BOARD </h1>
 
-</div>
+  </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><button class='btn btn-default' id="create-location" {{action 'locationButtonClicked'}}> Create Location </button></li>
+    <li><button class='btn btn-default' id="create-company" {{action 'companyButtonClicked'}}> Create Company </button></li>
+    <li><button class='btn btn-default' id="post-job" {{action 'buttonClicked'}}> Post a Job </button></li>
+        <li> {{#link-to 'admin.index'}}
+      Admin
+    {{/link-to}}</li> 
+      </ul>
+    </div>
+  </div>
+</nav>
