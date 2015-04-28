@@ -26,6 +26,7 @@ export default Ember.Component.extend({
     return result;
     return this._filter(result).filterBy('live');
   }).readOnly(),
+    
 
   filteredJobs: computed('jobsByType.[]', function() {
     var query = this.get('search');
@@ -48,6 +49,8 @@ export default Ember.Component.extend({
 
     return result;
   }).readOnly(),
+    
+   
 
   actions: {
     jobTypeChanged(type) {
@@ -61,5 +64,5 @@ export default Ember.Component.extend({
 //    jobChanged(job){
 //        this.sendAction('jobChanged',job);
 //    }
-  },
+  }
 });

@@ -7,10 +7,21 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('job', { path: '/jobs/:job_id' });
+  this.route('location', { path: '/locations/:location_id' });
+    
   this.resource('admin', function() {
     this.route('job', { path: '/jobs/:job_id' });
+    this.route('location', { path: '/locations/:location_id' });
   });
-  // setup the locations route here
+    
+ 
+    
+
+
+    
+   
+  
+
 });
 
 export default Router;

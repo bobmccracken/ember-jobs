@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
     jobTypeChanged(type) {
       this.set('type', type);
     },
-
+     
     searchChanged(search) {
       this.set('search', search);
     }

@@ -10,6 +10,9 @@ export default Ember.Component.extend({
     },
     companyButtonClicked() {
       this.sendAction('createCompany');
+    },
+     locationlistButtonClicked() {
+      this.sendAction('listLocation');
     }
   }
 });

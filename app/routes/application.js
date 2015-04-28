@@ -22,6 +22,12 @@ export default Ember.Route.extend({
         outlet: 'modal'
       });
     },
+    listLocation() {
+      this.render('modals/list-location', {
+        into: 'application',
+        outlet: 'modal'
+      });
+    },
 
     closeModal() {
       this.disconnectOutlet({
